@@ -21,14 +21,18 @@ popd
 pushd klvanc-tools
 	if [ ! -f .skip ]; then
 		export CFLAGS="-I$PWD/../target-root/include"
-		export CFLAGS="$CFLAGS -I/storage/dev/NIELSEN/sdk/package/include"
-		export CXXFLAGS="$CFLAGS"
 		export LDFLAGS="-L$PWD/../target-root/lib"
-		export LDFLAGS="$LDFLAGS -L/storage/dev/NIELSEN/sdk/package/lib"
+
+# Nielsen support
+#		export CFLAGS="$CFLAGS -I/storage/dev/NIELSEN/sdk/package/include"
+#		export LDFLAGS="$LDFLAGS -L/storage/dev/NIELSEN/sdk/package/lib"
+
+		export CXXFLAGS="$CFLAGS"
+
 		./autogen.sh --build
 		./configure --enable-shared=no --prefix=$PWD/../target-root
 		make -j8
 		make install
-#		touch .skip
+		touch .skip
 	fi
 popd
