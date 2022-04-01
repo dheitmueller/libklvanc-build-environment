@@ -1,0 +1,60 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+
+    // Configure glob patterns for excluding files and folders.
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/ffmpeg": true,
+        "**/target-root/**": true,
+    }
+
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/.lo": true,
+        "**/*.lo": true,
+        "**/*.Po": true,
+        "**/*.la": true,
+        "**/*.o": true,
+        "**/Makefile": true,
+        "**/Makefile.in": true,
+        "**/.libs": true,
+        "**/.deps": true,
+        "**/m4": true,
+        "**/autom4te.cache": true,
+        "**/config.*": true,
+        "**/configure": true,
+        "**/install-sh": true,
+        "**/aclocal.m4": true,
+        "**/compile": true,
+        "**/libtool": true,
+        "**/ltmain.sh": true,
+        "**/missing": true,
+        "**/depcomp": true,
+        "**/*.patch": true,
+        "**/tools/klvanc_parse": true,
+        "**/tools/klvanc_afd": true,
+        "**/tools/klvanc_scte104": true,
+        "**/tools/klvanc_smpte2038": true,
+        "**/tools/klvanc_util": true,
+        "**/tools/klvanc_eia708": true,
+        "**/tools/klvanc_genscte104": true,
+        "**/tools/klvanc_smpte12_2": true,
+        "**/tools/klvanc_capture": true,
+        "**/tools/klvanc_transmitter": true,
+    },
+    "files.associations": {
+        "*h*h*h*hfunctional": "cpp",
+        "functional": "cpp",
+        "*.tcc": "cpp",
+        "streambuf": "cpp",
+        "algorithm": "cpp",
+        "limits": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp"
+    }
+}
