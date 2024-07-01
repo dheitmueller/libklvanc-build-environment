@@ -69,11 +69,13 @@ pushd klvanc-tools
 # Nielsen support
 #		export CFLAGS="$CFLAGS -I/storage/dev/NIELSEN/sdk/package/include"
 #		export LDFLAGS="$LDFLAGS -L/storage/dev/NIELSEN/sdk/package/lib"
+#		export CFLAGS="$CFLAGS -I/storage/dev/NIELSEN/basic-decoder-sdk/package/include"
+#		export LDFLAGS="$LDFLAGS -L/storage/dev/NIELSEN/basic-decoder-sdk/package/lib"
 
 		export CXXFLAGS="$CFLAGS"
 
 		./autogen.sh --build
-		./configure --enable-shared=no --prefix=$DEP_BUILDROOT --with-bmsdk=$BMSDK_10_1_1
+		./configure --enable-shared=no --prefix=$DEP_BUILDROOT --with-bmsdk=$BMSDK_10_8_5
 		make -j8
 		make install
 		touch .skip
